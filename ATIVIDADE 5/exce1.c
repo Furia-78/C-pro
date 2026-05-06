@@ -1,16 +1,25 @@
 #include <stdio.h>
 
 int main() {
-   int i, codigo;
-   in validos = 0, invalidos = 0;
-   
-   // implemente aqui um for para ler exatamente 10 codigos.
-   // Para cada codigo verificaque:
-   // se codigo >= 1000 e codigo <= 9999 incremente validados.
-   // Caso contrario, incremente invalidos.
+    int i, codigo;
+    int validos = 0, invalidos = 0;
 
-   printf ("codigos validos:  %d", validos);
-   printf ("Codigos invalidos:%d", invalidos);
+    // lê exatamente 10 códigos
+    for(i = 1; i <= 10; i++) {
+
+        printf("Digite o codigo %d: ", i);
+        scanf("%d", &codigo);
+
+        // verifica se o código é válido
+        if(codigo >= 1000 && codigo <= 9999) {
+            validos++;
+        } else {
+            invalidos++;
+        }
+    }
+
+    printf("Codigos validos: %d\n", validos);
+    printf("Codigos invalidos: %d\n", invalidos);
 
     return 0;
 }
