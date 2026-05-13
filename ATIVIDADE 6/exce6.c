@@ -9,7 +9,7 @@ int main() {
         scanf("%d", &numeros[i]);
     }
 
-    printf("Digite o valor a buscar: ");
+    printf("valor 5: ");
     scanf("%d", &valor);
 
     for(i = 0; i < 10; i++) {
