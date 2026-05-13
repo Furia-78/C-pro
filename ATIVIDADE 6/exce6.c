@@ -1,18 +1,31 @@
+#include <stdio.h>
+
 int main() {
-    int numeros [10];
+    int numeros[10];
     int i, valor, encontrado = 0;
-    
+
     // Leia os valores
-    
-    printf ("digite o valor a buscar: ");
-    scanf ("%d", &valor);
-    
+    for(i = 0; i < 10; i++) {
+        printf("Digite o %dº numero: ", i + 1);
+        scanf("%d", &numeros[i]);
+    }
+
+    printf("Digite o valor a buscar: ");
+    scanf("%d", &valor);
+
     // Procure o valor
-    
+    for(i = 0; i < 10; i++) {
+        if(numeros[i] == valor) {
+            encontrado = 1;
+            break; // para quando encontra
+        }
+    }
+
     if (encontrado) {
-      printf ("valor encontrado!\n");
+        printf("Valor encontrado!\n");
     } else { 
-      printf ("valor nao encontrado!\n");
-   
+        printf("Valor nao encontrado!\n");
+    }
+
     return 0;
 }
