@@ -1,12 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    int numeros [10];
+    int numeros[10];
     int i;
-    
+
     // Leia os valores
+    for(i = 0; i < 10; i++) {
+        printf("Digite o %dº numero: ", i + 1);
+        scanf("%d", &numeros[i]);
+    }
+
     // Substitua negativos por zero
+    for(i = 0; i < 10; i++) {
+        if(numeros[i] < 0) {
+            numeros[i] = 0;
+        }
+    }
+
     // Exiba o vetor final
-   
+    printf("\nVetor final:\n");
+    for(i = 0; i < 10; i++) {
+        printf("%d ", numeros[i]);
+    }
+
     return 0;
 }
