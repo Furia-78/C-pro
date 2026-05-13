@@ -1,16 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int numeros[10]; // corrigido aqui
+    int numeros[10]; 
     int i;
 
-    // Leia os 10 números
     for(i = 0; i < 10; i++) {
         printf("Digite o %dº numero: ", i + 1);
         scanf("%d", &numeros[i]);
     }
-
-    // Exiba os 10 números
     printf("\nNumeros digitados:\n");
     for(i = 0; i < 10; i++) {
         printf("%d ", numeros[i]);
