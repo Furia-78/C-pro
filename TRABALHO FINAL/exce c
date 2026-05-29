@@ -1,0 +1,113 @@
+// Online C compiler to run C program online
+/*
+
+PSEUDOCOGIGO 
+
+INÍCIO 
+
+DECLARE vetor idades[10] 
+
+DECLARE autorizacao 
+
+DECLARE i 
+
+DECLARE liberados ← 0 
+
+DECLARE negados ← 0 
+
+DECLARE maiorIdade ← 0 
+
+DECLARE somaIdades ← 0 
+
+DECLARE media 
+
+PARA i ← 0 ATÉ 9 FAÇA 
+
+ESCREVA "Qual a idade da ", i+1, "ª pessoa: " 
+
+LEIA idades[i] 
+
+ESCREVA "A pessoa ", i+1, " possui autorização? (1-Sim ou 2-Não): " 
+
+LEIA autorizacao 
+
+SE (idades[i] >= 18 OU autorizacao = 1) ENTÃO 
+
+ESCREVA "Entrada Liberada" 
+
+liberados ← liberados + 1 
+
+SENÃO 
+
+ESCREVA "Entrada Negada" 
+
+negados ← negados + 1 
+
+FIMSE 
+
+SE (i = 0 OU idades[i] > maiorIdade) ENTÃO 
+
+maiorIdade ← idades[i] 
+
+FIMSE 
+
+somaIdades ← somaIdades + idades[i] 
+
+FIMPARA 
+
+media ← somaIdades / 10 
+
+ESCREVA "Quantidade de entradas liberadas: ", liberados 
+
+ESCREVA "Quantidade de entradas negadas: ", negados 
+
+ESCREVA "Maior idade registrada: ", maiorIdade 
+
+ESCREVA "Média das idades: ", media 
+
+FIM */
+
+#include <stdio.h> 
+ 
+int main() { 
+    int idades[10]; 
+    int autorizacao; 
+ 
+    int i; 
+ 
+    int liberados = 0; 
+    int negados = 0; 
+ 
+    int maiorIdade = 0; 
+ 
+    int somaIdades = 0; 
+    float media; 
+ 
+   for(i = 0; i < 10; i++){
+        printf("Qual a idade da %dº pessoa: ", i+1);
+        scanf("%d", &idades[i]);
+        printf("A pessoa %dº possui autorizacao? (1-Sim ou 2-Nao): ", i+1);
+        scanf("%d", &autorizacao);
+        
+        if(idades[i] >= 18 || autorizacao == 1){
+            printf("Entrada Liberada\n");
+            liberados++;
+        }else{
+            printf("Entrada Negada\n");
+            negados++;
+        }
+        
+        if(i==0 || idades[i] > maiorIdade){
+            maiorIdade = idades[i];
+        }
+        somaIdades += idades[i];
+    }
+        media = somaIdades/10.0;
+        
+    printf("Quantidade de entradas liberadas: %d\n", liberados);
+    printf("Quantidade de entradas negadas: %d\n", negados);
+    printf("Maior idade registrada: %d\n", maiorIdade);
+    printf("média das idades: %2.f\n", media);
+ 
+    return 0; 
+} 
